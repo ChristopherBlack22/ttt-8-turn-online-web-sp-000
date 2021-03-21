@@ -4,11 +4,11 @@ def turn(board)
   index = input_to_index(input)
   if valid_move?(board, index)
     move(board, index)
+    display_board(board)
   else
     puts "Sorry that move is not possible"
     turn(board)
   end
-  display_board(board)
 end
 
 def display_board(board)
